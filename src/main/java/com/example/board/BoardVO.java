@@ -1,4 +1,4 @@
-package com.example.bean;
+package com.example.board;
 
 public class BoardVO {
     public int getSeq() {

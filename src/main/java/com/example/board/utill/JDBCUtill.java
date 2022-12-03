@@ -1,4 +1,4 @@
-package com.example.utill;
+package com.example.board.utill;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
