@@ -52,7 +52,7 @@ public class BoardController {
             System.out.println("데이터 수정 성공!!! ");
         return "redirect:posts";
     }
-    @RequestMapping(value = "/board//deleteok/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/board/deleteok/{id}", method = RequestMethod.GET)
     public String deletePostOk(@PathVariable("id")int vo) {
         int i = boardDAO.deleteClassList(vo);
         if(i == 0)
