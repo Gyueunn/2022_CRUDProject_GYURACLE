@@ -1,6 +1,15 @@
 package com.example.board;
 
 public class BoardVO {
+    private int seq;
+    private String titleName;
+    private String professor;
+    private int section;
+    private float credits;
+    private String type;
+    private String classTime;
+    private String category;
+    private int english;
     public int getSeq() {
         return seq;
     }
@@ -73,13 +82,5 @@ public class BoardVO {
         this.english = english;
     }
 
-    private int seq;
-    private String titleName;
-    private String professor;
-    private int section;
-    private float credits;
-    private String type;
-    private String classTime;
-    private String category;
-    private int english;
+
 }

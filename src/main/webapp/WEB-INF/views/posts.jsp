@@ -39,7 +39,7 @@
 </head>
 <body>
 
-<h1>수업 정보 관리 시스템</h1>
+<h1>GYURACLE</h1>
 <table id = "posts" width="90%">
     <tr>
         <th>Index</th>

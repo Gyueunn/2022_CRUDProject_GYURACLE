@@ -10,10 +10,6 @@
         <property name="password" value="Pais0Wuiqu"></property>
     </bean>
 
-    <bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
-        <property name="dataSource" ref="ds"></property>
-    </bean>
-
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref = "ds"></property>
         <property name="configLocation" value="classpath:mybatis-config.xml"/>

@@ -8,28 +8,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
+@RequestMapping(value="/board")
 public class BoardController {
-    @RequestMapping(value="/")
-    public String home(){
-        return "index";
-    }
+
     @Autowired
-    BoardDAO boardDAO;
-
-    @RequestMapping(value = "/board/posts", method = RequestMethod.GET)
+    BoardServiceImpl boardService;
+    @RequestMapping(value = "posts", method = RequestMethod.GET)
     public String classlistlist(Model model) {
-        model.addAttribute("posts", boardDAO.getClassListList());
-        return"board/posts";
+        model.addAttribute("posts", boardService.getClassListList());
+        return "posts";
     }
 
-    @RequestMapping(value = "/board/add", method = RequestMethod.GET)
+    @RequestMapping(value = "/add", method = RequestMethod.GET)
     public String addPost() {
-        return"board/addpostform";
+        return "addpostform";
     }
 
-    @RequestMapping(value = "/board/addok", method = RequestMethod.POST)
+    @RequestMapping(value = "/addok", method = RequestMethod.POST)
     public String addPostOK(BoardVO vo) {
-        int i = boardDAO.insertClassList(vo);
+        int i = boardService.insertClassList(vo);
         if(i == 0)
             System.out.println("데이터 추가 실패 ");
         else
@@ -37,24 +34,24 @@ public class BoardController {
         return "redirect:posts";
     }
 
-    @RequestMapping(value = "/board/editform/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/editform/{id}", method = RequestMethod.GET)
     public String editPost(@PathVariable("id") int id, Model model) {
-        BoardVO boardVO = boardDAO.getClassList(id);
+        BoardVO boardVO = boardService.getClassList(id);
         model.addAttribute("boardVO", boardVO);
-        return "board/editform";
+        return "editform";
     }
-    @RequestMapping(value = "/board/editok", method = RequestMethod.POST)
+    @RequestMapping(value = "/editok", method = RequestMethod.POST)
     public String editPostOk(BoardVO vo) {
-        int i = boardDAO.updateClassList(vo);
+        int i = boardService.updateClassList(vo);
         if(i == 0)
             System.out.println("데이터 수정 실패 ");
         else
             System.out.println("데이터 수정 성공!!! ");
         return "redirect:posts";
     }
-    @RequestMapping(value = "/board/deleteok/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/deleteok/{id}", method = RequestMethod.GET)
     public String deletePostOk(@PathVariable("id")int vo) {
-        int i = boardDAO.deleteClassList(vo);
+        int i = boardService.deleteClassList(vo);
         if(i == 0)
             System.out.println("데이터 삭제 실패 ");
         else

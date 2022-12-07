@@ -7,7 +7,6 @@ import java.util.List;
 
 @Service
 public class BoardServiceImpl implements BoardService{
-
     @Autowired
     BoardDAO boardDAO;
 
@@ -17,42 +16,23 @@ public class BoardServiceImpl implements BoardService{
     }
 
     @Override
-    public int deleteBoard(int seq) {
-        return 0;
+    public int deleteClassList(int seq) {
+        return boardDAO.deleteClassList(seq);
     }
 
     @Override
-    public int updateBoard(BoardVO vo) {
-        return 0;
+    public int updateClassList(BoardVO vo) {
+        return boardDAO.updateClassList(vo);
     }
 
     @Override
-    public BoardVO getBoard(int seq) {
-        return null;
+    public BoardVO getClassList(int seq) {
+        return boardDAO.getClassList(seq);
     }
 
     @Override
-    public List<BoardVO> getBoardList() {
-        return null;
+    public List<BoardVO> getClassListList() {
+        return boardDAO.getClassListList();
     }
 
-//    @Override
-//    public int deleteClassList(int seq) {
-//        return boardDAO.deleteClassList(seq);
-//    }
-//
-//    @Override
-//    public int updateClassList(BoardVO vo) {
-//        return boardDAO.updateClassList(vo);
-//    }
-//
-//    @Override
-//    public BoardVO getClassList(int seq) {
-//        return boardDAO.getClassList(seq);
-//    }
-//
-//    @Override
-//    public List<BoardVO> getClassListList() {
-//        return boardDAO.getClassListList();
-//    }
 }

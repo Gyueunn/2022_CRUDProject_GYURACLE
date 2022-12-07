@@ -7,7 +7,7 @@
     </insert>
     <update id = "updateClassList">
             update CLASSLIST
-            set title=#{titleName} , professor=#{professor}, section=#{section}, credits=#{credits}, type=#{type}, classTime=#{classTime}, category=#{category}, english=#{english}
+            set titleName=#{titleName} , professor=#{professor}, section=#{section}, credits=#{credits}, type=#{type}, classTime=#{classTime}, category=#{category}, english=#{english}
             where seq=#{seq}
     </update>
     <delete id = "deleteClassList">
