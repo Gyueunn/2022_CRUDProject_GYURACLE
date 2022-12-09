@@ -71,5 +71,6 @@
     </c:forEach>
 </table>
 <br/><button type = "button" onclick="location.href='add'">수업 추가</button>
+<button type="logout" onclick="location.href='../login/logout'">Logout</button>
 </body>
 </html>
