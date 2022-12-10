@@ -40,8 +40,29 @@
         <tr><td>Credits</td><td><input type = "text" name = "credits" /></td></tr>
         <tr><td>Type</td><td><input type = "text" name = "type" /></td></tr>
         <tr><td>ClassTime</td><td><input type = "text" name = "classTime" /></td></tr>
-        <tr><td>Category</td><td><input type = "text" name = "category" /></td></tr>
-        <tr><td>Eng. Rate</td><td><input type = "text" name = "english" /></td></tr>
+
+        <tr><td>Category</td><td>
+            <select name="category">
+            <option value="">없음</option>
+            <option value="실선">실선</option>
+            <option value="실필">실필</option>
+            <option value="교필">교필</option>
+            <option value="교선">교선</option>
+            <option value="공필">공필</option>
+            <option value="전필">전필</option>
+            <option value="전선">전선</option>
+            <option value="부필">부필</option>
+            <option value="부선">부선</option>
+            <option value="자선">자선</option>
+            <option value="전선필">전선필</option>
+            <option value="교선필">교선필</option>
+            <option value="공선">공선</option>
+        </select></td></tr>
+
+        <tr><td>Eng. Rate</td><td>
+            <input type = "radio" name = "english" value="0" checked/>0
+            <input type = "radio" name = "english" value="100"/>100
+        </td></tr>
     </table>
     <button type = "button" onclick="location.href='posts'">수업 목록</button>
     <button type="submit">수업 추가</button>

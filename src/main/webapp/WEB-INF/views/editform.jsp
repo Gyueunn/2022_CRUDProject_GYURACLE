@@ -60,14 +60,25 @@
             <td>ClassTime</td>
             <td><form:input path = "classTime" /></td>
         </tr>
-        <tr>
-            <td>Category</td>
-            <td><form:input path = "category" /></td>
-        </tr>
-        <tr>
-            <td>Eng. Rate</td>
-            <td><form:input path = "english" /></td>
-        </tr>
+        <tr><td>Category</td>
+            <td><form:select path="category">
+                <form:option value="실선" label="실선"/>
+                <form:option value="실필" label="실필"/>
+                <form:option value="교필" label="교필"/>
+                <form:option value="교선" label="교선"/>
+                <form:option value="공필" label="공필"/>
+                <form:option value="전필" label="전필"/>
+                <form:option value="전선" label="전선"/>
+                <form:option value="부필" label="부필"/>
+                <form:option value="부선" label="부선"/>
+                <form:option value="자선" label="자선"/>
+                <form:option value="전선필" label="전선필"/>
+                <form:option value="교선필" label="교선필"/>
+                <form:option value="공선" label="공선"/>
+            </form:select></td></tr>
+        <tr><td>Eng. Rate</td>
+            <td><form:radiobutton path="english" value="0" label="0" />
+                <form:radiobutton path="english" value="100" label="100" /></td></tr>
     </table>
     <input type="submit" value="수정" />
     <input type="button" value="취소" onclick="history.back()"/>
