@@ -39,7 +39,7 @@
 </head>
 <body>
 
-<h1>GYURACLE</h1>
+<h1>GYURACLE이라네</h1>
 <table id = "posts" width="90%">
     <tr>
         <th>Index</th>
